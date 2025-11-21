@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoCuy - Colectivo de Danza Contemporánea</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #DC143C;
+        }
+        .hero-image {
+            background-image: url('https://via.placeholder.com/1200x400?text=Imagen+de+Danza+Contemporanea');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+            margin-top: 120px;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(30,144,255,0.4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-overlay h2 {
+            font-size: 2em;
+        }
+        .hero-overlay p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .resumen {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .resumen h2 {
+            margin-bottom: 30px;
+        }
+        .seccion-resumen {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            vertical-align: top;
+        }
+        .seccion-resumen h3 {
+            color: #000;
+        }
+        .seccion-resumen p {
+            margin-bottom: 15px;
+        }
+        .seccion-resumen a {
+            background-color: #DC143C;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .seccion-resumen a:hover {
+            background-color: #B22222;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MoCuy</h1>
+        <p>Colectivo de Danza Contemporánea</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="galeria.html">Galería</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <div class="hero-image">
+        <div class="hero-overlay">
+            <div>
+                <h2>Innovación y Expresión Artística</h2>
+                <p>Descubre nuestro trabajo en danza contemporánea, con años de experiencia y colaboraciones destacadas.</p>
+            </div>
+        </div>
+    </div>
+    <section class="resumen">
+        <h2>Explora Nuestras Secciones</h2>
+        <div class="seccion-resumen">
+            <h3>Sobre Nosotros</h3>
+            <p>Conoce nuestra historia, miembros y misión.</p>
+            <a href="sobre-nosotros.html">Ver Más</a>
+        </div>
+        <div class="seccion-resumen">
+            <h3>Galería</h3>
+            <p>Fotos y videos de nuestras performances.</p>
+            <a href="galeria.html">Ver Galería</a>
+        </div>
+        <div class="seccion-resumen">
+            <h3>Eventos</h3>
+            <p>Próximos talleres y espectáculos.</p>
+            <a href="eventos.html">Ver Eventos</a>
+        </div>
+        <div class="seccion-resumen">
+            <h3>Blog</h3>
+            <p>Reflexiones y noticias sobre danza.</p>
+            <a href="blog.html">Leer Blog</a>
+        </div>
+        <div class="seccion-resumen">
+            <h3>Contacto</h3>
+            <p>Conéctate con nosotros.</p>
+            <a href="contacto.html">Contactar</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MoCuy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
