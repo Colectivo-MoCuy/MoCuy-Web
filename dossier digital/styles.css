@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lato:wght@300;400;700&display=swap');
+
+:root{
+  --bg:#0f1724; /* azul muy oscuro */
+  --panel:#181a2a;
+  --accent:#6A5FBF; /* violeta suave */
+  --muted:#A69DDF;
+  --accent2:#4aa3d8; /* cian / acento frío */
+  --soft:#CFF2F8;
+  --text:#EAE8F9;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+
+  background-image: url('assets/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* 👈 ESTA ES LA CLAVE */
+  
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+html::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0, 0, 0, 0.50); /* puedes variar: 0.40–0.55 */
+  pointer-events:none;
+  z-index:-1;
+}
+.page{max-width:1000px;margin:0 auto;padding:40px;}
+.hero{padding:120px 20px;border-radius:12px;text-align:center;background:linear-gradient(180deg, rgba(20,22,35,0.45), rgba(16,18,30,0.35));backdrop-filter: blur(4px);}
+.hero h1{font-family:'Cinzel Decorative', serif;font-size:44px;margin:0;color:var(--muted);letter-spacing:1px}
+.hero .subtitle{margin-top:10px;color:var(--soft);font-size:16px}
+.hero .byline{margin-top:12px;color:var(--accent2);font-weight:600}
+
+.panel{margin:36px 0;padding:26px;border-radius:10px;background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 18px rgba(5,8,20,0.6);border:1px solid rgba(255,255,255,0.03)}
+.panel h2{font-family:'Cinzel Decorative', serif;color:var(--accent);margin-top:0}
+.panel p, .panel li{color:var(--text);line-height:1.5}
+
+.table-wrap{overflow:auto}
+.fases, .semanal, .budget{width:100%;border-collapse:collapse}
+.fases th, .semanal th, .budget th{background:rgba(106,95,191,0.12);padding:8px;text-align:left;font-weight:700}
+.fases td, .semanal td, .budget td{padding:8px;border-top:1px solid rgba(255,255,255,0.03)}
+.budget-wrap{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.chart{flex:1 1 420px;height:320px;background:transparent}
+.chart.small{height:240px}
+.budget-table{flex:0 0 320px}
+
+.total td{border-top:2px solid rgba(255,255,255,0.06)}
+
+.site-footer{padding:18px;text-align:center;opacity:0.85;color:var(--muted);font-size:13px}
+
+/* responsive */
+@media (max-width:900px){
+  .page{padding:20px}
+  .hero{padding:80px 20px}
+  .budget-wrap{flex-direction:column}
+}
+.page {
+  background: rgba(10, 12, 20, 0.50); /* oscurece sutilmente el fondo bajo TODO el texto */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.panel {
+  background: rgba(15, 17, 28, 0.65); /* panel más oscuro para texto */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero {
+  background: rgba(15, 17, 28, 0.55); /* cabecera más legible */
+  backdrop-filter: blur(6px);
+}
+
+p, li {
+  color: #F2F1FA; /* blanco suave más brillante */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9); /* contraste para texto */
+}
