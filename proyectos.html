@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - MoCuy</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            height: 2.5em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        header img:hover {
+            opacity: 0.8;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #DC143C;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 120px auto 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide h3 {
+            cursor: pointer;
+            color: #DC143C;
+            transition: color 0.3s;
+        }
+        .slide h3:hover {
+            color: #B22222;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+        .carousel-controls div {
+            width: 50px;
+            height: 100%;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0,0,0,0.3);
+            font-size: 1.5em;
+        }
+        .carousel-controls div:hover {
+            background-color: rgba(0,0,0,0.1);
+            color: rgba(0,0,0,0.8);
+        }
+        #prev {
+            /* Lado izquierdo */
+        }
+        #next {
+            /* Lado derecho */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+        .modal-content h3 {
+            color: #DC143C;
+        }
+        .close {
+            float: right;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media queries para móviles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+            header img {
+                height: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+            section {
+                padding: 20px 15px;
+                margin: 100px auto 0;
+            }
+            .carousel {
+                height: 250px;
+            }
+            .slide {
+                padding: 15px;
+            }
+            .carousel-controls div {
+                width: 30px;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="assets/img/logo.png" alt="MoCuy">
+        </a>
+        <p>Colectivo de Danza Contemporánea</p>
+        <nav>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="galeria.html">Galería</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección inicial: Información de "Sobre Nosotros" -->
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>MoCuy es un colectivo dedicado a la danza contemporánea con un enfoque creativo. Fundado en 2024 por Jonathan Pallo y Melany Sancan, nuestros artistas combinan técnica precisa con expresiones innovadoras, participando en eventos internacionales y colaboraciones artísticas.</p>
+        <h3>Misión</h3>
+        <p>MoCuy es un colectivo de danza contemporánea dedicado a crear, producir y difundir obras de alta calidad. Nuestra misión es promover procesos de formación, investigación y experimentación que impulsen el crecimiento artístico de nuestros intérpretes y contribuyan al desarrollo cultural de nuestro entorno.</p>
+        <h3>Visión</h3>
+        <p>En los próximos 7 años, MoCuy busca crecer como una plataforma artística dedicada a la creación, la formación y la investigación. Nuestro objetivo es fortalecer nuestra presencia y lenguaje para avanzar hacia una compañía de danza contemporánea con una identidad sólida, un rigor creativo auténtico y la capacidad de dialogar en calidad y propuesta con los principales referentes nacionales.</p>
+        <h3>Distribución Actual</h3>
+        <ul>
+            <li><strong>Director General</strong>: Jonathan Pallo</li>
+            <li><strong>Codirector</strong>: Melany Sancan</li>
+            <li><strong>Director de Iluminación</strong>: Andrew Mora</li>
+        </ul>
+        <p>Cabe recalcar que cada integrante de MoCuy no solo cumple un rol en el colectivo, sino también el rol de coreógrafos e intérpretes. Cada uno tiene pase libre para crear obras.</p>
+    </section>
+
+    <!-- Sección del Dossier (movido del blog) -->
+    <section id="dossier">
+        <h2>Dossier: [Título del Dossier]</h2>
+        <p>[Pega aquí el contenido del dossier del blog, ej. texto, imágenes, etc.]</p>
+        <img src="assets/img/dossier-imagen.jpg" alt="Imagen del Dossier" style="max-width: 100%; height: auto;">
+        <p>Más detalles: [Agrega lo que necesites].</p>
+    </section>
+
+    <!-- Sección "Últimas Noticias": Carrusel automático con controles -->
+    <section id="ultimas-noticias">
+        <h2>Últimas Noticias</h2>
+        <div class="carousel">
+            <div class="slide active" data-modal="1">
+                <h3>Proyecto 1: Fusión Urbano-Contemporáneo</h3>
+                <p>Fecha estimada: Diciembre 2024. Una colaboración con artistas urbanos para explorar la danza en espacios públicos. Involucra coreografías innovadoras y proyecciones digitales.</p>
+            </div>
+            <div class="slide" data-modal="2">
+                <h3>Proyecto 2: Residencia Artística Internacional</h3>
+                <p>Fecha estimada: Enero 2025. Residencia en [país] con bailarines locales. Enfoque en intercambios culturales y nuevas técnicas de movimiento.</p>
+            </div>
+            <div class="slide" data-modal="3">
+                <h3>Proyecto 3: Espectáculo Interactivo</h3>
+                <p>Fecha estimada: Febrero 2025. Un show donde el público participa vía app. Combina danza en vivo con elementos tecnológicos para una experiencia inmersiva.</p>
+            </div>
+            <div class="carousel-controls">
+                <div id="prev"></div>
+                <div id="next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido se llena con JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MoCuy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Efecto de scroll: Fade-in al entrar en vista
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        sections.forEach(section => observer.observe(section));
+
+        // Carrusel con fade-in/fade-out
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        // Auto-scroll cada 5 segundos
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Controles manuales en laterales
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        // Modal para detalles
+        const modal = document.getElementById('modal');
+        const modalBody = document.getElementById('modal-body');
+        const closeBtn = document.querySelector('.close');
+
+        // Datos detallados para cada proyecto (expande aquí)
+        const projectDetails = {
+            1: {
+                title: 'Proyecto 1: Fusión Urbano-Contemporáneo',
+                content: '<p>Fecha estimada: Diciembre 2024.</p><p>Una colaboración con artistas urbanos para explorar la danza en espacios públicos. Involucra coreografías innovadoras y proyecciones digitales. Este proyecto busca fusionar la energía callejera con la expresividad contemporánea, creando performances que interactúan con el entorno urbano. Participantes incluyen bailarines locales y artistas de graffiti. El objetivo es democratizar el arte, llevando la danza a plazas y calles donde el público pueda unirse espontáneamente.</p><p>Detalles adicionales: Duración de 45 minutos, con música en vivo y efectos visuales. Próximas fechas en [ciudad].</p>'
+            },
+            2: {
+                title: 'Proyecto 2: Residencia Artística Internacional',
+                content: '<p>Fecha estimada: Enero 2025.</p><p>Residencia en [país] con bailarines locales. Enfoque en intercambios culturales y nuevas técnicas de movimiento. Durante esta residencia, nuestros artistas colaborarán con creadores internacionales para desarrollar piezas que mezclen tradiciones culturales. Incluye talleres diarios, improvisaciones y presentaciones finales. El énfasis está en la innovación técnica, explorando movimientos híbridos que combinan danza contemporánea con elementos folclóricos.</p><p>Detalles adicionales: Duración de 3 semanas, con alojamiento y comidas incluidas. Invitaciones abiertas para bailarines emergentes.</p>'
+            },
+            3: {
+                title: 'Proyecto 3: Espectáculo Interactivo',
+                content: '<p>Fecha estimada: Febrero 2025.</p><p>Un show donde el público participa vía app. Combina danza en vivo con elementos tecnológicos para una experiencia inmersiva. Los espectadores descargan una app que les permite influir en la coreografía en tiempo real, votando por movimientos o enviando sugerencias. La danza se adapta dinámicamente, creando una narrativa colectiva. Tecnología incluye sensores de movimiento y proyecciones AR.</p><p>Detalles adicionales: Duración de 60 minutos, con Q&A interactivo al final. Próximas funciones en teatros de [ciudad].</p>'
+            }
+        };
+
+        // Abrir modal al click en título
+        slides.forEach(slide => {
+            const title = slide.querySelector('h3');
+            title.addEventListener('click', () => {
+                const modalId = slide.getAttribute('data-modal');
+                const details = projectDetails[modalId];
+                modalBody.innerHTML = `<h3>${details.title}</h3>${details.content}`;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Cerrar modal
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

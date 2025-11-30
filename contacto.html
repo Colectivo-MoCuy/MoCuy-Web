@@ -1,4 +1,3 @@
-Contacto.HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,10 +23,13 @@ Contacto.HTML
             top: 0;
             z-index: 1000;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            font-weight: bold;
+        header img {
+            height: 2.5em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        header img:hover {
+            opacity: 0.8;
         }
         header p {
             font-size: 1.2em;
@@ -81,17 +83,45 @@ Contacto.HTML
             text-align: center;
             padding: 20px;
         }
+
+        /* Media queries para móviles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+            header img {
+                height: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+            section {
+                padding: 20px 15px;
+                margin: 100px auto 0;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>MoCuy</h1>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="assets/img/logo.png" alt="MoCuy">
+        </a>
         <p>Colectivo de Danza Contemporánea</p>
         <nav>
-            <a href="index.html">Inicio</a>
             <a href="sobre-nosotros.html">Sobre Nosotros</a>
             <a href="galeria.html">Galería</a>
-            <a href="eventos.html">Eventos</a>
+            <a href="proyectos.html">Proyectos</a>
             <a href="blog.html">Blog</a>
             <a href="contacto.html">Contacto</a>
         </nav>
