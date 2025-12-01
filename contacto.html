@@ -132,6 +132,10 @@
         <p>Instagram: <a href="https://www.instagram.com/colectivo.mocuy" target="_blank">📷 @colectivo.mocuy</a></p>
         <p>Únete a nuestra comunidad y sigue nuestras performances.</p>
         <h3>Envíanos un Mensaje</h3>
+        <!-- Mensaje visual tras envío exitoso (se muestra si ?status=ok en la URL) -->
+        <div id="contact-status" role="status" aria-live="polite" style="display:none; margin:12px 0; padding:12px; border-radius:6px; background:#e6ffed; color:#064e2e; border:1px solid #b7f3c6;">
+            <strong>¡Enviado!</strong> Gracias por escribirnos — te contestaremos a la brevedad.
+        </div>
         <!-- Envío via https://formsubmit.co/ - confirma el correo la primera vez que lo uses -->
         <form action="https://formsubmit.co/colectivo.mocuy@gmail.com" method="POST">
             <!-- Protecciones y opciones para FormSubmit -->
@@ -152,5 +156,28 @@
     <footer>
         <p>&copy; 2024 MoCuy. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Mostrar mensaje si ?status=ok y limpiar la URL
+        (function () {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('status') === 'ok') {
+                    const el = document.getElementById('contact-status');
+                    if (el) el.style.display = 'block';
+                    // quitar query string para evitar que el mensaje persista al recargar
+                    if (window.history && window.history.replaceState) {
+                        const url = new URL(window.location);
+                        url.search = '';
+                        window.history.replaceState({}, document.title, url.toString());
+                    }
+                    // opcional: ocultar el mensaje luego de 7s
+                    setTimeout(() => { if (el) el.style.display = 'none'; }, 7000);
+                }
+            } catch (e) {
+                // no bloquear la página si algo falla
+                console.error('Error leyendo status de contacto', e);
+            }
+        })();
+    </script>
 </body>
 </html>
