@@ -26,6 +26,9 @@
         header img {
             /* altura multiplicada por 8 (2.5em * 8 = 20em) por petición */
             height: 20em;
+            /* limitar tamaño máximo para evitar huecos enormes en header */
+            max-height: 160px;
+            width: auto;
             cursor: pointer;
             transition: opacity 0.3s;
         }
@@ -206,6 +209,8 @@
             header img {
                 /* móvil: 2em * 8 = 16em */
                 height: 16em;
+                max-height: 110px;
+                width: auto;
             }
             header p {
                 font-size: 1em;
