@@ -25,13 +25,14 @@
         }
         .header-top {
             display: flex;
+            flex-direction: column; /* colocar logo encima del tagline */
             align-items: center;
-            gap: 6px;
-            justify-content: center; /* centrar logo+tagline */
+            justify-content: center; /* centrar logo+tagline horizontalmente */
         }
         .site-tagline {
-            margin: 0; /* evita márgenes por defecto y reduce espacio */
+            margin: 0;
             font-size: 1.2em;
+            margin-top: 1.5cm; /* distancia solicitada */
         }
         header img {
             /* tamaño grande a estilo antepenúltimo, pero limitado por max-height */
