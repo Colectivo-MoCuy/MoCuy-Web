@@ -4,65 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - MoCuy</title>
+    <link rel="stylesheet" href="assets/css/header.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            padding-top: 140px; /* espacio para header fijo */
+            /* padding-top gestionado en assets/css/header.css */
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
-        }
-        header {
-            background-color: #000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            min-height: 140px;
-        }
-        .header-top {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .site-tagline {
-            margin: 0;
-            font-size: 1.2em;
-            margin-top: 0.25rem;
-        }
-        header img {
-            /* aumentar ligeramente el logo (más grande visual), pero acotar tamaño real */
-            height: auto;
-            max-height: 110px;
-            width: auto;
-            width: auto;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        header img:hover {
-            opacity: 0.8;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #DC143C;
         }
         section {
             padding: 40px 20px;
@@ -81,17 +32,7 @@
 
         /* Media queries para móviles */
         @media (max-width: 768px) {
-            header {
-                padding: 15px;
-                min-height: 110px;
-            }
-            body { padding-top: 110px; }
-            header img {
-                /* móvil: ajustar */
-                height: auto;
-                max-height: 75px;
-                width: auto;
-            }
+            /* header / mobile adjustments now in assets/css/header.css */
             header p {
                 font-size: 1em;
             }

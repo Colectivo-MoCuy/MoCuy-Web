@@ -4,67 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - MoCuy</title>
+    <link rel="stylesheet" href="assets/css/header.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            padding-top: 140px; /* espacio para header fijo */
+            /* padding-top gestionado por assets/css/header.css */
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            min-height: 140px;
-        }
-        .header-top {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        
-        .site-tagline {
-            margin: 0;
-            font-size: 1.2em;
-            margin-top: 0.25rem;
-        }
-        header img {
-            /* logo: limitar para que no rompa el layout */
-            height: auto;
-            max-height: 110px; /* igual que index.html */
-            width: auto;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        header img:hover {
-            opacity: 0.8;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #DC143C;
-        }
+        /* header styles moved to assets/css/header.css */
         section {
             padding: 40px 20px;
             max-width: 1200px;
@@ -100,13 +51,7 @@
 
         /* Media queries para móviles */
         @media (max-width: 768px) {
-            header { padding: 15px; min-height: 110px; }
-            /* reservar el espacio menor para header fijo en móvil */
-            body { padding-top: 110px; }
-            header img { height: auto; max-height: 75px; width: auto; }
-            header p { font-size: 1em; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; font-size: 0.9em; }
+            /* header/mobile adjustments now come from assets/css/header.css */
             section { padding: 20px 15px; margin: 50px auto 0; }
             footer { padding: 15px; }
         }
