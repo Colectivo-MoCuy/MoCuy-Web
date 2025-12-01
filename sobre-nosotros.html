@@ -9,6 +9,7 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            padding-top: 140px; /* espacio para header fijo */
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
@@ -22,6 +23,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            min-height: 140px;
         }
         .header-top {
             display: flex;
@@ -32,12 +34,12 @@
         .site-tagline {
             margin: 0;
             font-size: 1.2em;
-            margin-top: 1.5cm;
+            margin-top: 0.75rem;
         }
         header img {
             /* aumentar ligeramente el logo (más grande visual), pero acotar tamaño real */
-            height: 22em;
-            max-height: 200px;
+            height: auto;
+            max-height: 90px;
             width: auto;
             width: auto;
             cursor: pointer;
@@ -81,11 +83,13 @@
         @media (max-width: 768px) {
             header {
                 padding: 15px;
+                min-height: 110px;
             }
+            body { padding-top: 110px; }
             header img {
-                /* móvil: un poco mayor por petición */
-                height: 18em;
-                max-height: 140px;
+                /* móvil: ajustar */
+                height: auto;
+                max-height: 60px;
                 width: auto;
             }
             header p {
