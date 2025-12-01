@@ -12,7 +12,7 @@ body {
 section {
   padding: 40px 20px;
   max-width: 1200px;
-  margin: 60px auto 0;
+  margin: 20px auto 0;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -47,5 +47,5 @@ footer {
 
 /* Small mobile adjustments that apply site-wide */
 @media (max-width: 768px) {
-  section { padding: 20px 15px; margin: 50px auto 0; }
+  section { padding: 20px 15px; margin: 20px auto 0; }
 }

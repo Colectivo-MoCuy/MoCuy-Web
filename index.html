@@ -10,12 +10,12 @@
     <style>
         /* body and shared layout styles moved to assets/css/layout.css */
         .hero-image {
-            background-image: url('https://via.placeholder.com/1200x400?text=Imagen+de+Danza+Contemporanea');
+            background-image: url('https://via.placeholder.com/1400x600?text=Imagen+de+Danza+Contemporanea');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 480px; /* aumentar para mostrar la imagen más grande */
             position: relative;
-                margin-top: 60px;
+            margin-top: 10px; /* reducir espacio entre header y hero */
         }
         .hero-overlay {
             position: absolute;
@@ -128,8 +128,8 @@
         @media (max-width: 768px) {
             /* header / body padding y logo móvil ahora vienen de assets/css/header.css */
             .hero-image {
-                height: 250px;
-                margin-top: 100px;
+                height: 360px;
+                margin-top: 40px;
             }
             .hero-overlay h2 {
                 font-size: 1.5em;

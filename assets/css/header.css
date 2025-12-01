@@ -7,7 +7,8 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  min-height: 140px;
+  /* reducir altura del header para evitar que tape contenido y disminuir espacio superior */
+  min-height: 120px;
   z-index: 1000;
 }
 .header-top {
@@ -23,7 +24,8 @@ header {
 }
 header img {
   height: auto;
-  max-height: 110px;
+  /* permitir que el logo se muestre más grande si lo recortaste */
+  max-height: 140px;
   width: auto;
   cursor: pointer;
   transition: opacity 0.3s;
@@ -36,9 +38,11 @@ nav a:hover { color: #DC143C; }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  header { padding: 15px; min-height: 110px; }
-  body { padding-top: 110px; }
-  header img { max-height: 75px; }
+  header { padding: 12px; min-height: 100px; }
+  /* espacio reservado para header fijo en móvil */
+  body { padding-top: 100px; }
+  /* logo móvil ligeramente mayor */
+  header img { max-height: 90px; }
   header p { font-size: 1em; }
   nav { margin-top: 15px; }
   nav a { margin: 0 10px; font-size: 0.9em; }
@@ -46,5 +50,6 @@ nav a:hover { color: #DC143C; }
 
 /* Reserve space for the fixed header on desktop */
 @media (min-width: 769px) {
-  body { padding-top: 140px; }
+  /* reservar espacio igual al min-height (desktop) */
+  body { padding-top: 120px; }
 }
