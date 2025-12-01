@@ -1,55 +1,52 @@
 /* Header and navigation shared styles for MoCuy */
+/* --- HEADER GENERAL --- */
 header {
-  background-color: #000;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  min-height: 100px; /* HEADER MÁS DELGADO */
+  background-color: #ffffff; /* Ajustable si usas otro color */
+  position: sticky;
   top: 0;
-  /* reducir altura del header para evitar que tape contenido y disminuir espacio superior */
-  min-height: 120px;
   z-index: 1000;
 }
+
 .header-top {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 16px;
 }
-.site-tagline {
-  margin: 0;
-  font-size: 1.2em;
-  margin-top: 0.25rem;
-}
-header img {
+
+.site-tagline { margin: 0; font-size: 1.1em; color: #222; }
+
+/* --- LOGO MÁS GRANDE EN COMPUTADORAS --- */
+header img.logo {
+  max-height: 160px; /* LOGO MÁS GRANDE */
   height: auto;
-  /* permitir que el logo se muestre más grande si lo recortaste */
-  max-height: 140px;
   width: auto;
-  cursor: pointer;
-  transition: opacity 0.3s;
+  transition: all 0.2s ease-in-out;
 }
-header img:hover { opacity: 0.8; }
-header p { font-size: 1.2em; margin-top: 10px; }
-nav { margin-top: 20px; }
-nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-nav a:hover { color: #DC143C; }
+
+/* --- MENÚ --- */
+header nav ul { display: flex; gap: 25px; list-style: none; margin: 0; padding: 0; }
+header nav ul li a { text-decoration: none; font-size: 18px; color: #222; }
+
+/* --- Opt (hover) */
+header nav ul li a:hover { color: #DC143C; }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  header { padding: 12px; min-height: 100px; }
-  /* espacio reservado para header fijo en móvil */
-  body { padding-top: 100px; }
-  /* logo móvil ligeramente mayor */
-  header img { max-height: 90px; }
-  header p { font-size: 1em; }
-  nav { margin-top: 15px; }
-  nav a { margin: 0 10px; font-size: 0.9em; }
+  header { min-height: 80px; padding: 8px 20px; }
+  header img.logo { max-height: 120px; }
+  header nav ul { gap: 15px; }
+  header nav ul li a { font-size: 16px; }
 }
 
 /* Reserve space for the fixed header on desktop */
-@media (min-width: 769px) {
-  /* reservar espacio igual al min-height (desktop) */
-  body { padding-top: 120px; }
+@media (max-width: 480px) {
+  header { min-height: 70px; padding: 5px 15px; }
+  header img.logo { max-height: 95px; }
+  header nav ul { gap: 10px; }
+  header nav ul li a { font-size: 15px; }
 }
