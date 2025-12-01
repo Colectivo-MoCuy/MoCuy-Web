@@ -22,7 +22,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            min-height: 140px;
+            min-height: 140px; /* Mantengo esto, pero si el logo más grande hace que se vea apretado, aumenta a 150px */
             z-index: 1000;
         }
         .header-top {
@@ -34,12 +34,12 @@
         .site-tagline {
             margin: 0;
             font-size: 1.2em;
-            margin-top: 0.75rem; /* separación visual apropiada */
+            margin-top: 0.25rem; /* Reducido de 0.75rem a 0.25rem para que el texto esté más pegado al logo */
         }
         header img {
             /* logo: limitar para que no rompa el layout */
             height: auto;
-            max-height: 90px; /* escritorio */
+            max-height: 110px; /* Aumentado de 90px a 110px para escritorio (un poco más grande) */
             width: auto;
             cursor: pointer;
             transition: opacity 0.3s;
@@ -139,9 +139,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            section {
-                padding: 20px 15px;
-                margin: 50px auto;
         }
         .slide h3 {
             cursor: pointer;
@@ -217,14 +214,14 @@
         @media (max-width: 768px) {
             header {
                 padding: 15px;
-                min-height: 110px;
+                min-height: 110px; /* Mantengo esto, pero si es necesario, aumenta a 120px */
             }
             /* reducir el espacio reservado en móviles para que no sea excesivo */
             body { padding-top: 110px; }
             header img {
                 /* tamaño móvil limitado */
                 height: auto;
-                max-height: 60px; /* móvil */
+                max-height: 75px; /* Aumentado de 60px a 75px para móvil (un poco más grande) */
                 width: auto;
                 width: auto;
             }
@@ -272,10 +269,11 @@
     </style>
 </head>
 <body>
+    <!-- El resto del HTML permanece igual -->
     <header>
         <div class="header-top">
             <a href="index.html" style="text-decoration: none; color: inherit;">
-                <img src="assets/img/logo.jpg" alt="MoCuy">
+                <img src="assets/img/logo.jpg" alt="MoCuy"> <!-- Cambia a logo.svg si conviertes el formato -->
             </a>
             <p class="site-tagline">Colectivo de Danza Contemporánea</p>
         </div>
@@ -288,6 +286,7 @@
         </nav>
     </header>
 
+    <!-- Resto del body igual -->
     <div class="hero-image">
         <div class="hero-overlay">
             <div>
