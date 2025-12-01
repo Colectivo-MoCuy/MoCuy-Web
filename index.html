@@ -26,18 +26,15 @@
         .header-top {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 6px;
         }
         .site-tagline {
             margin: 0; /* evita márgenes por defecto y reduce espacio */
             font-size: 1.05em;
         }
-        }
         header img {
-            /* aumentar ligeramente el logo (más grande visual), pero acotar tamaño real */
-            height: 22em;
-            /* limitar tamaño máximo para evitar huecos enormes en header */
-            max-height: 200px;
+            /* RESTAURADO: tamaño original más moderado para evitar problemas al hacer click */
+            height: 2.5em;
             width: auto;
             cursor: pointer;
             transition: opacity 0.3s;
@@ -217,9 +214,8 @@
                 padding: 15px;
             }
             header img {
-                /* móvil: un poco mayor por petición */
-                height: 18em;
-                max-height: 140px;
+                /* RESTAURADO: tamaño móvil original */
+                height: 2em;
                 width: auto;
             }
             header p {
