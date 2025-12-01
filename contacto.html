@@ -132,7 +132,17 @@
         <p>Instagram: <a href="https://www.instagram.com/colectivo.mocuy" target="_blank">📷 @colectivo.mocuy</a></p>
         <p>Únete a nuestra comunidad y sigue nuestras performances.</p>
         <h3>Envíanos un Mensaje</h3>
-        <form action="#" method="post">
+        <!-- Envío via https://formsubmit.co/ - confirma el correo la primera vez que lo uses -->
+        <form action="https://formsubmit.co/colectivo.mocuy@gmail.com" method="POST">
+            <!-- Protecciones y opciones para FormSubmit -->
+            <!-- _honey -> campo honeypot para bots (dejar vacío) -->
+            <input type="hidden" name="_honey" value="">
+            <!-- _captcha false evita la página de captcha por defecto en Formsubmit (opcional) -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- _next redirige al usuario tras envío exitoso -->
+            <input type="hidden" name="_next" value="https://colectivo-mocuy.github.io/MoCuy-Web/contacto.html?status=ok">
+            <!-- _subject personaliza el asunto del correo que recibirás -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde la web - MoCuy">
             <input type="text" name="name" placeholder="Tu Nombre" required>
             <input type="email" name="email" placeholder="Tu Correo" required>
             <textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
