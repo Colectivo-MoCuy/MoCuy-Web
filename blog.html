@@ -23,6 +23,15 @@
             top: 0;
             z-index: 1000;
         }
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .site-tagline {
+            margin: 0;
+            font-size: 1.05em;
+        }
         header img {
             /* aumentar ligeramente el logo (más grande visual), pero acotar tamaño real */
             height: 22em;
@@ -104,10 +113,12 @@
 </head>
 <body>
     <header>
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            <img src="assets/img/logo.jpg" alt="MoCuy">
-        </a>
-        <p>Colectivo de Danza Contemporánea</p>
+        <div class="header-top">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/img/logo.jpg" alt="MoCuy">
+            </a>
+            <p class="site-tagline">Colectivo de Danza Contemporánea</p>
+        </div>
         <nav>
             <a href="sobre-nosotros.html">Sobre Nosotros</a>
             <a href="galeria.html">Galería</a>
