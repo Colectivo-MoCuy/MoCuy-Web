@@ -120,12 +120,6 @@
             background-color: rgba(0,0,0,0.1);
             color: rgba(0,0,0,0.8);
         }
-        #prev {
-            /* Lado izquierdo */
-        }
-        #next {
-            /* Lado derecho */
-        }
         .modal {
             display: none;
             position: fixed;
@@ -206,6 +200,7 @@
         </a>
         <p>Colectivo de Danza Contemporánea</p>
         <nav>
+            <a href="index.html">Inicio</a>
             <a href="sobre-nosotros.html">Sobre Nosotros</a>
             <a href="galeria.html">Galería</a>
             <a href="proyectos.html">Proyectos</a>
@@ -214,34 +209,9 @@
         </nav>
     </header>
 
-    <!-- Sección inicial: Información de "Sobre Nosotros" -->
-    <section id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>MoCuy es un colectivo dedicado a la danza contemporánea con un enfoque creativo. Fundado en 2024 por Jonathan Pallo y Melany Sancan, nuestros artistas combinan técnica precisa con expresiones innovadoras, participando en eventos internacionales y colaboraciones artísticas.</p>
-        <h3>Misión</h3>
-        <p>MoCuy es un colectivo de danza contemporánea dedicado a crear, producir y difundir obras de alta calidad. Nuestra misión es promover procesos de formación, investigación y experimentación que impulsen el crecimiento artístico de nuestros intérpretes y contribuyan al desarrollo cultural de nuestro entorno.</p>
-        <h3>Visión</h3>
-        <p>En los próximos 7 años, MoCuy busca crecer como una plataforma artística dedicada a la creación, la formación y la investigación. Nuestro objetivo es fortalecer nuestra presencia y lenguaje para avanzar hacia una compañía de danza contemporánea con una identidad sólida, un rigor creativo auténtico y la capacidad de dialogar en calidad y propuesta con los principales referentes nacionales.</p>
-        <h3>Distribución Actual</h3>
-        <ul>
-            <li><strong>Director General</strong>: Jonathan Pallo</li>
-            <li><strong>Codirector</strong>: Melany Sancan</li>
-            <li><strong>Director de Iluminación</strong>: Andrew Mora</li>
-        </ul>
-        <p>Cabe recalcar que cada integrante de MoCuy no solo cumple un rol en el colectivo, sino también el rol de coreógrafos e intérpretes. Cada uno tiene pase libre para crear obras.</p>
-    </section>
-
-    <!-- Sección del Dossier (movido del blog) -->
-    <section id="dossier">
-        <h2>Dossier: [Título del Dossier]</h2>
-        <p>[Pega aquí el contenido del dossier del blog, ej. texto, imágenes, etc.]</p>
-        <img src="assets/img/dossier-imagen.jpg" alt="Imagen del Dossier" style="max-width: 100%; height: auto;">
-        <p>Más detalles: [Agrega lo que necesites].</p>
-    </section>
-
-    <!-- Sección "Últimas Noticias": Carrusel automático con controles -->
-    <section id="ultimas-noticias">
-        <h2>Últimas Noticias</h2>
+    <!-- Sección: Proyectos (Carrusel con fade y botones sin flechas) -->
+    <section id="proyectos">
+        <h2>Proyectos</h2>
         <div class="carousel">
             <div class="slide active" data-modal="1">
                 <h3>Proyecto 1: Fusión Urbano-Contemporáneo</h3>
@@ -322,7 +292,7 @@
         const modalBody = document.getElementById('modal-body');
         const closeBtn = document.querySelector('.close');
 
-        // Datos detallados para cada proyecto (expande aquí)
+        // Datos detallados para cada proyecto
         const projectDetails = {
             1: {
                 title: 'Proyecto 1: Fusión Urbano-Contemporáneo',

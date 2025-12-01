@@ -160,12 +160,7 @@
             background-color: rgba(0,0,0,0.1);
             color: rgba(0,0,0,0.8);
         }
-        #prev {
-            /* Lado izquierdo */
-        }
-        #next {
-            /* Lado derecho */
-        }
+        /* Removed empty #prev and #next rules to fix previous linter warnings */
         .modal {
             display: none;
             position: fixed;
@@ -366,7 +361,7 @@
         const modalBody = document.getElementById('modal-body');
         const closeBtn = document.querySelector('.close');
 
-        // Datos detallados para cada proyecto (expande aquí)
+        // Datos detallados para cada proyecto
         const projectDetails = {
             1: {
                 title: 'Proyecto 1: Fusión Urbano-Contemporáneo',
