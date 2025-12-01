@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - MoCuy</title>
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <script src="assets/js/include-header.js" defer></script>
     <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* padding-top ahora viene de assets/css/header.css */
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.6;
-        }
+        /* body moved to assets/css/layout.css */
         /* header styles moved to assets/css/header.css */
         .slide h3:hover {
             color: #B22222;
@@ -73,12 +67,7 @@
             font-size: 1.5em;
             cursor: pointer;
         }
-        footer {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+        /* footer moved to assets/css/layout.css */
 
         /* Media queries para móviles */
         @media (max-width: 768px) {
@@ -104,21 +93,22 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-top">
-            <a href="index.html" style="text-decoration: none; color: inherit;">
-                <img src="assets/img/logo.jpg" alt="MoCuy">
-            </a>
-            <p class="site-tagline">Colectivo de Danza Contemporánea</p>
-        </div>
-        <nav>
-            <a href="sobre-nosotros.html">Sobre Nosotros</a>
-            <a href="galeria.html">Galería</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="blog.html">Blog</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+        <div id="site-header-placeholder"></div>
+        <noscript>
+            <header>
+                <div class="header-top">
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><img src="assets/img/logo.jpg" alt="MoCuy"></a>
+                    <p class="site-tagline">Colectivo de Danza Contemporánea</p>
+                </div>
+                <nav>
+                    <a href="sobre-nosotros.html">Sobre Nosotros</a>
+                    <a href="galeria.html">Galería</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
+        </noscript>
 
     <!-- Sección: Proyectos (Carrusel con fade y botones sin flechas) -->
     <section id="proyectos">

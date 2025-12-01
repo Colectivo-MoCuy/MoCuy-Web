@@ -1,0 +1,51 @@
+/* Shared layout styles for MoCuy (common across pages) */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Common section styles */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shared button */
+.btn {
+  background-color: #DC143C;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.btn:hover { background-color: #B22222; }
+
+/* Footer shared */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Small mobile adjustments that apply site-wide */
+@media (max-width: 768px) {
+  section { padding: 20px 15px; margin: 50px auto 0; }
+}
