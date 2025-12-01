@@ -27,14 +27,16 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            justify-content: center;
         }
         .site-tagline {
             margin: 0;
-            font-size: 1.05em;
+            font-size: 1.2em;
         }
         header img {
-            /* RESTAURADO: tamaño original */
-            height: 2.5em;
+            /* tamaño grande a estilo antepenúltimo, limitado por max-height */
+            height: 22em;
+            max-height: 200px;
             width: auto;
             cursor: pointer;
             transition: opacity 0.3s;
@@ -101,8 +103,10 @@
                 padding: 15px;
             }
             header img {
-                /* RESTAURADO: tamaño móvil original */
-                height: 2em;
+                /* tamaño móvil grande limitado */
+                height: 18em;
+                max-height: 140px;
+                width: auto;
                 width: auto;
             }
             header p {
